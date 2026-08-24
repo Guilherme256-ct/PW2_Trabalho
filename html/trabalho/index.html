@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>IMC - Índice de Massa Corporal</h1></header>
+
+    <form>
+        <fieldset id="campo-tudo">
+            <label for="peso">Informe seu peso </label>
+            <input type="text" id="peso" placeholder="Digite seu peso aqui">
+
+            <label for="altura">Informe sua altura </label>
+            <input type="text" id="altura" placeholder="Digite sua altura aqui">
+            <div>
+                <fieldset id="campo-sexo">
+                    <h2>Sexo</h2>
+                    <label for="F">Feminino </label>
+                    <input type="radio" name="sexo" id="F" value="F">
+                    <label for="M">Masculino </label>
+                    <input type="radio" name="sexo" id="M" value="M">
+                </fieldset>
+            </div>
+            <label for="IMC">O valor do seu IMC é: </label>
+            <input type="text" id="IMC" disabled>
+            <label for="peso-ideal">Seu peso ideal é: </label>
+            <input type="text" id="peso-ideal" disabled>
+
+            <div id="botoes">
+                <button onclick="Calcular()">Calcular</button>
+                <button type="reset" onclick="getElementById('peso').focus()">Limpar</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
