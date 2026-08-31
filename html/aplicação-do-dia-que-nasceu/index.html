@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O dia em que nasci</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <label for="dia_nasc">Informe o dia em que nasceu: </label>
+            <input type="text" id="dia_nasc">
+            <label for="mes_nasc">Informe o mês em que nasceu: </label>
+            <input type="text" id="mes_nasc">
+            <label for="ano_nasc">Informe o ano em que nasceu: </label>
+            <input type="text" id="ano_nasc">
+
+            <label for="mes_texto">Seu mês de nascimento é: </label>
+            <input type="text" disabled id="mes_texto">
+            <label for="dia_semana">O dia da semana foi: </label>
+            <input type="text" disabled id="dia_semana">
+            <label for="signo_imagem">Sob o signo de: </label>
+            <img src="" alt="" id="signo_imagem">
+            <label for="idade">E sua idade: </label>
+            <input type="text" disabled id="idade">
+
+            <div>
+                <input type="button" value="Exibir" onclick="Exibir()">
+                <input type="reset" value="Limpar" onclick="getElementById('dia_nasc').focus()">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
