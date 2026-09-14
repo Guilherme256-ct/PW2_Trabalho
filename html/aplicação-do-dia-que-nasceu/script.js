@@ -20,6 +20,10 @@ function Exibir(){
         alert("Forneça um ano válido!");
         document.getElementById("ano_nasc").focus();
     }
+    else if(ano.length<4 || ano.length>4){
+        alert("Forneça um ano válido com comprimento de 4!");
+        document.getElementById("ano_nasc").focus();
+    }
     else{
         dia=parseFloat(dia);
         mes=parseFloat(mes);
@@ -41,17 +45,12 @@ function Exibir(){
         else{
             
             ano=eval(ano);
-            if(maxlength(ano)!=4){
-                alert("Forneça um ano válido com comprimento de 4!")
-            }
-            else{
-                alert("b");
-                ano=parseInt(ano);
-                mes=parseInt(mes)-1;
-                dia=parseInt(dia);
-                document.getElementById("mes_texto").value=mesExtenso[mes];
-                alert("QUEJO");
-            }
+            ano=parseInt(ano);
+            mes=parseInt(mes)-1;
+            dia=parseInt(dia);
+            
+            document.getElementById("mes_texto").value=mesExtenso[mes];
+            
         }
     }
 }
