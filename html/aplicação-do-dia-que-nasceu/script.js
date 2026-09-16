@@ -41,7 +41,7 @@ function Exibir(){
 
         //checa se o ano, mes e dia são inteiros e se estão corretos
         
-        if(mes>12 || mes<1){
+        if(mes>12 || mes<0){
             alert("Forneça um mês válido que seja INTEIRO e entre 1 e 12!");
             document.getElementById("mes_nasc").focus();
         }
@@ -50,24 +50,40 @@ function Exibir(){
             document.getElementById("dia_nasc").focus(); 
         }
         else{
-            document.getElementById("mes_texto").value=mesExtenso[mes];
+            document.getElementById("mes_texto").value=mesExtenso[hoje.getMonth()];
             var semana=dia%7;
             if(semana==0){
                 semana=7;
             }
             document.getElementById("dia_semana").value=diaExtenso[hoje.getDay()]
-            var idadePessoa=hoje.getFullYear()-ano;
-            if(hoje.getFullYear()==ano){
-                if(hoje.getMonth()<mes){
+            var idadePessoa=ano_hoje-hoje.getFullYear();
+            if(hoje.getFullYear()>ano_hoje || idadePessoa>105){
+                alert("Você é do futuro ou já morreu!");
+                document.getElementById("ano_nasc").focus();
+            }
+            else if(hoje.getFullYear()==ano_hoje && (mes_hoje<hoje.getMonth()+1 || (mes_hoje==hoje.getMonth()+1 && dia_hoje<hoje.getDate()))){
+                alert("Você nasceu no futuro!");
+                location.reload();
+            }
+            else{
+                if(mes_hoje<hoje.getMonth()+1){
                     idadePessoa-=1;
                 }
-                else if(hoje.getMonth()==mes){
-                    if(hoje.getDate()>dia){
+                else if(hoje.getMonth()+1==mes_hoje){
+                    if(hoje.getDate()>dia_hoje){
                         idadePessoa-=1;
                     }
                 }
+                document.getElementById("idade").value=idadePessoa;
+                if((hoje.getMonth()+1>=1 && hoje.getMonth()<=2)){
+                    if((hoje.getMonth()+1==1 && 21<=hoje.getDate()) || (hoje.getMonth()+1==2 && hoje.getDate()<=19)){
+                        document.images["signo_imagem"].src = "assets\Aquario.png"
+                        
+                    
+                    }
+                }
             }
-            document.getElementById("idade").value=idadePessoa;
+            
                                             
             
         }

@@ -10,11 +10,14 @@ body {
   background-image:url("assets/c58d078a-856c-4aed-9ff9-0bf536e245f2.jpg");
   background-size: 100%;
   background-position: center;
+   
   
 }
 
 fieldset{
   background-color: white;
+  
+ 
 }
 
 .row input {
@@ -26,7 +29,8 @@ fieldset{
   width: 440px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10%;
+ 
 }
 
 .row {
@@ -34,13 +38,15 @@ fieldset{
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  
+ 
 }
 
 .row label {
   flex-shrink: 0;
 }
 
-.row input,
+
 .row span {
   width: 160px;
 
