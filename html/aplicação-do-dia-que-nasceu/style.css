@@ -10,7 +10,12 @@ body {
   background-image:url("assets/c58d078a-856c-4aed-9ff9-0bf536e245f2.jpg");
   background-size: 100%;
   background-position: center;
-   
+  
+}
+ #signo_imagem {
+    width: 120px;
+    height: auto;
+    display: block;
   
 }
 
@@ -68,8 +73,23 @@ fieldset{
   border-radius: 4px;
   min-height: 1em;
 }
+fieldset label {
+    display: block;      
+    margin-top: 20px;
+}
 
+fieldset input[type="text"] {
+    display: block;     
+    margin-top: 4px;
+}
 
+#signo_imagem {
+    display: block;      
+    width: 120px;
+    height: auto;
+    margin-top: 4px;
+}
 
-
-
+fieldset div {
+    margin-top: 15px;    
+}
